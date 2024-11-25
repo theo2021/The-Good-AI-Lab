@@ -1,0 +1,66 @@
+site_name: The Good AI Lab
+site_url: https://goodailab.org  # Replace with your actual URL
+site_author: The Good AI Lab Team
+site_description: Connecting industry and academia to foster ethical AI research.
+theme:
+  name: material
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+  palette:
+    - scheme: default
+      primary: blue
+      accent: light-blue
+    - scheme: slate
+      primary: blue
+      accent: light-blue
+    - scheme: dark
+      primary: blue
+      accent: light-blue
+markdown_extensions:
+  - toc:
+      permalink: True
+  - footnotes
+  - tables
+  - admonition
+
+# Navigation structure
+nav:
+  - Home: index.md
+  - Statutes: statutes.md
+  # - Policies & Values: policies.md
+  # - Projects: projects.md
+  # - Research Areas: research_areas.md
+  # - Contact: contact.md
+
+# Plugins
+plugins:
+  - search
+  - autorefs  # Automatically links references between pages
+
+# Customization
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/goodailab  # Replace with your GitHub repo
+    - icon: fontawesome/brands/linkedin
+      link: https://linkedin.com/company/goodailab  # Replace with your LinkedIn page
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/goodailab  # Replace with your Twitter handle
+  favicon: assets/favicon.ico  # Replace with the path to your favicon
+
+# Static files and assets
+extra_css:
+  - stylesheets/custom.css  # Add your custom CSS file here
+
+extra_javascript:
+  - javascripts/custom.js  # Add your custom JavaScript file here
+
+# Static directory
+docs_dir: docs
+site_dir: site
+
+# Build options
+use_directory_urls: true
+strict: true
