@@ -9,7 +9,11 @@ permissions:
   contents: write
 
 jobs:
-  build-and-deploy:
+  quality:
+    uses: ./.github/workflows/code-quality.yml
+
+  deploy:
+    needs: quality
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -37,4 +41,4 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           folder: frontend/out
-          branch: gh-pages 
+          branch: gh-pages
