@@ -1,0 +1,47 @@
+name: Code Quality
+
+on:
+  workflow_call:
+    outputs:
+      status:
+        description: "The status of the quality checks"
+        value: ${{ jobs.code-quality.outputs.status }}
+
+jobs:
+  code-quality:
+    runs-on: ubuntu-latest
+    outputs:
+      status: ${{ steps.quality-check.outputs.status }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 8
+
+      - name: Install Dependencies
+        working-directory: frontend
+        run: pnpm install
+
+      - name: Type Check
+        working-directory: frontend
+        run: pnpm typecheck
+
+      - name: Lint
+        working-directory: frontend
+        run: pnpm lint
+
+      - name: Build
+        working-directory: frontend
+        run: pnpm build
+
+      - name: Set output
+        id: quality-check
+        run: echo "status=success" >> $GITHUB_OUTPUT

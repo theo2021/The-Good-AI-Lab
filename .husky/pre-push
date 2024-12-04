@@ -1,0 +1,14 @@
+# Run only if there are changes in the frontend directory
+if git diff --name-only HEAD^ HEAD | grep --quiet "frontend"; then
+
+    # Change to frontend from any path
+    git_root=$(git rev-parse --show-toplevel)
+    cd "$git_root/frontend" || exit
+
+    echo "Running code quality check..."
+    pnpm lint
+
+    echo "Running type check..."
+    pnpm typecheck
+
+fi

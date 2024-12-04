@@ -1,0 +1,4 @@
+cd frontend || exit
+
+echo "Running code quality check..."
+pnpm lint
