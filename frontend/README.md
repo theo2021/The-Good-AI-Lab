@@ -22,13 +22,20 @@ pnpm install
 pnpm dev
 ```
 
+For lint run:
+
+```bash
+pnpm lint
+```
+
 Then open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 ## Project Structure
 
 - `src/app` - Next.js app router pages and layouts
 - `src/components` - React components
-  - `sections` - Main page sections (About, WhatWeDo, HowWeOperate)
+  - `Section.tsx` - Main page sections template
+  - `SectionRow.tsx` - A row inside the Section
   - `layout` - Layout components like Footer
   - `icons` - SVG icons and related components
 - `src/config` - Configuration files and settings
@@ -39,4 +46,3 @@ Then open [http://localhost:3000](http://localhost:3000) with your browser to se
 - [Tailwind CSS](https://tailwindcss.com/) - Styling
 - [Framer Motion](https://www.framer.com/motion/) - Animations
 - [TypeScript](https://www.typescriptlang.org/) - Type safety
-

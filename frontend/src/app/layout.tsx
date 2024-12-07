@@ -2,11 +2,11 @@ import type { Metadata } from "next";
 import { Raleway } from "next/font/google";
 import "./globals.css";
 
-const raleway = Raleway({ 
-  subsets: ['latin'],
-  display: 'swap',
-  weight: ['100', '200', '300', '400', '500', '600', '700'],
-  variable: '--font-raleway',
+const raleway = Raleway({
+  subsets: ["latin"],
+  display: "swap",
+  weight: ["100", "200", "300", "400", "500", "600", "700"],
+  variable: "--font-raleway",
 });
 
 export const metadata: Metadata = {
@@ -21,9 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${raleway.variable} antialiased`}>
-        {children}
-      </body>
+      <body className={`${raleway.variable} antialiased`}>{children}</body>
     </html>
   );
 }
