@@ -27,7 +27,7 @@ jobs:
       - name: Setup pnpm
         uses: pnpm/action-setup@v2
         with:
-          version: 8
+          version: 9
 
       - name: Install Dependencies
         working-directory: frontend
@@ -38,10 +38,13 @@ jobs:
         env:
           NODE_ENV: production
           NEXT_PUBLIC_BASE_PATH: /The-Good-AI-Lab
-        run: pnpm build
+          NEXT_PUBLIC_ASSET_PREFIX: /The-Good-AI-Lab
+        run: |
+          pnpm next build && touch out/.nojekyll
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           folder: frontend/out
           branch: gh-pages
+          clean: true
