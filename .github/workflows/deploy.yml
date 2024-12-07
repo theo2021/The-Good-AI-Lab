@@ -37,7 +37,7 @@ jobs:
         working-directory: frontend
         env:
           NODE_ENV: production
-          NEXT_PUBLIC_BASE_PATH: /The-Good-AI-Lab
+          NEXT_PUBLIC_BASE_PATH: /
         run: pnpm build
 
       - name: Deploy
