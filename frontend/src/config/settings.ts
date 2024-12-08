@@ -7,14 +7,18 @@ export const settings: Settings = {
       hoverColor: "hover:text-[#7289DA]",
     },
     x: {
-      url: "https://x.com/goodailab",
-      hoverColor: "hover:text-[#1DA1F2]",
+      url: "https://x.com/thegoodailab",
+      hoverColor: "hover:text-[#1DA1F2]"
     },
-    linkedin: {
-      url: "https://linkedin.com/company/goodailab",
-      hoverColor: "hover:text-[#0077B5]",
+    instagram: {
+      url: "https://instagram.com/thegoodailab",
+      hoverColor: "hover:text-[#E1306C]"
     },
-  },
+    // linkedin: {
+    //   url: "https://linkedin.com/company/thegoodailab",
+    //   hoverColor: "hover:text-[#0077B5]"
+    // },
+  }
 };
 
 export default settings;
