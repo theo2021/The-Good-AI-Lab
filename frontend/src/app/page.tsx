@@ -1,6 +1,7 @@
 import Intro from "@/components/layout/Intro";
 import Footer from "@/components/layout/Footer";
 import Section from "@/components/Section";
+import Papers from "@/components/layout/Papers";
 import { SectionRowProps } from "@/components/SectionRow";
 
 function WhatWeDo() {
@@ -62,6 +63,7 @@ export default function Home() {
       <Intro />
       <WhatWeDo />
       <HowWeOperate />
+      <Papers />
       <Footer />
     </main>
   );

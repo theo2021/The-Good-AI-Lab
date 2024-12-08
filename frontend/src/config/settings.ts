@@ -1,4 +1,4 @@
-import type { Settings } from "@/types/settings";
+import type { Settings, Paper } from "@/types/settings";
 
 export const settings: Settings = {
   social: {
@@ -19,6 +19,48 @@ export const settings: Settings = {
     //   hoverColor: "hover:text-[#0077B5]"
     // },
   },
+  papers: [
+    {
+      title: "A Novel Approach to AI Research",
+      authors: "John Doe, Jane Smith, Robert Johnson",
+      venue: "ICLR 2024",
+      links: [
+        {
+          text: "Paper",
+          url: "https://arxiv.org/abs/...",
+          icon: "file-lines",
+        },
+        {
+          text: "Code",
+          url: "https://github.com/...",
+          icon: "code",
+        },
+        {
+          text: "Blog",
+          url: "https://blog.example.com/...",
+          icon: "newspaper",
+        },
+      ],
+    },
+    {
+      title: "Understanding Deep Learning Fundamentals",
+      authors: "Jane Smith, Alan Turing, Grace Hopper",
+      venue: "NeurIPS 2023",
+      links: [
+        {
+          text: "Paper",
+          url: "https://arxiv.org/abs/...",
+          icon: "file-lines",
+        },
+        {
+          text: "Project Page",
+          url: "https://project.example.com/...",
+          icon: "globe",
+        },
+      ],
+    },
+    // Add more papers as needed
+  ] as Paper[],
 };
 
 export default settings;
