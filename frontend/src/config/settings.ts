@@ -8,17 +8,17 @@ export const settings: Settings = {
     },
     x: {
       url: "https://x.com/thegoodailab",
-      hoverColor: "hover:text-[#1DA1F2]"
+      hoverColor: "hover:text-[#1DA1F2]",
     },
     instagram: {
       url: "https://instagram.com/thegoodailab",
-      hoverColor: "hover:text-[#E1306C]"
+      hoverColor: "hover:text-[#E1306C]",
     },
     // linkedin: {
     //   url: "https://linkedin.com/company/thegoodailab",
     //   hoverColor: "hover:text-[#0077B5]"
     // },
-  }
+  },
 };
 
 export default settings;

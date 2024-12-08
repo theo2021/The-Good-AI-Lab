@@ -1,12 +1,12 @@
-import settings from '@/config/settings'
-import { BsLinkedin, BsDiscord, BsTwitterX, BsInstagram } from 'react-icons/bs'
+import settings from "@/config/settings";
+import { BsLinkedin, BsDiscord, BsTwitterX, BsInstagram } from "react-icons/bs";
 
 const socialIconsMap = {
   x: BsTwitterX,
   linkedin: BsLinkedin,
   discord: BsDiscord,
   instagram: BsInstagram,
-}
+};
 
 const Footer = () => {
   return (
