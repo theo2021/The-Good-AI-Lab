@@ -1,12 +1,12 @@
-import settings from '@/config/settings'
-import { BsLinkedin, BsDiscord, BsTwitterX, BsInstagram } from 'react-icons/bs'
+import settings from "@/config/settings";
+import { BsLinkedin, BsDiscord, BsTwitterX, BsInstagram } from "react-icons/bs";
 
 const socialIconsMap = {
   x: BsTwitterX,
   linkedin: BsLinkedin,
   discord: BsDiscord,
   instagram: BsInstagram,
-}
+};
 
 const Footer = () => {
   return (
@@ -14,11 +14,14 @@ const Footer = () => {
       <div className="container mx-auto flex flex-col items-center space-y-4">
         <div className="text-center">
           <h3 className="text-xl font-semibold mb-2">Get in touch</h3>
-          <p className="text-gray-300">Follow us on social media or drop us a message</p>
+          <p className="text-gray-300">
+            Follow us on social media or drop us a message
+          </p>
         </div>
         <div className="flex justify-center space-x-6">
           {Object.entries(settings.social).map(([platform, data]) => {
-            const IconComponent = socialIconsMap[platform as keyof typeof socialIconsMap]
+            const IconComponent =
+              socialIconsMap[platform as keyof typeof socialIconsMap];
             return IconComponent ? (
               <a
                 key={platform}
@@ -29,16 +32,18 @@ const Footer = () => {
               >
                 <IconComponent size={24} />
               </a>
-            ) : null
+            ) : null;
           })}
         </div>
         <div className="text-center text-gray-400 text-sm mt-4">
           <p>The Good AI Lab</p>
-          <p className="mt-1">&copy; {new Date().getFullYear()} All rights reserved.</p>
+          <p className="mt-1">
+            &copy; {new Date().getFullYear()} All rights reserved.
+          </p>
         </div>
       </div>
     </footer>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;
