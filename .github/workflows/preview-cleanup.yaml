@@ -1,0 +1,22 @@
+name: Cleanup PR Preview
+
+on:
+  pull_request:
+    types: [closed]
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  cleanup:
+    runs-on: ubuntu-latest
+    if: github.event.pull_request.merged != true
+    steps:
+      - name: Remove preview
+        uses: rossjrw/pr-preview-action@v1
+        with:
+          source-dir: ./frontend/out
+          preview-branch: gh-pages
+          umbrella-dir: pr-preview
+          action: remove 
