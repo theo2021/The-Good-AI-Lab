@@ -1,12 +1,14 @@
-name: Deploy Preview
+name: Deploy PR Preview
 
 on:
   pull_request:
-    types: [opened, synchronize, reopened]
+    types: [opened, reopened, synchronize]
 
 permissions:
   contents: write
   pull-requests: write
+
+concurrency: preview-${{ github.ref }}
 
 jobs:
   quality:
@@ -37,33 +39,12 @@ jobs:
         working-directory: frontend
         env:
           NODE_ENV: production
-          NEXT_PUBLIC_BASE_PATH: /pr-preview/${{ github.event.pull_request.number }}
         run: pnpm build
 
-      - name: Deploy Preview
-        uses: JamesIves/github-pages-deploy-action@v4
+      - name: Deploy preview
+        uses: rossjrw/pr-preview-action@v1
         with:
-          folder: frontend/out
-          branch: gh-pages
-          target-folder: pr-preview/${{ github.event.pull_request.number }}
-          clean: true
-
-      - name: Find Comment
-        uses: peter-evans/find-comment@v2
-        id: find-comment
-        with:
-          issue-number: ${{ github.event.pull_request.number }}
-          comment-author: 'github-actions[bot]'
-          body-includes: Preview deployment
-
-      - name: Comment PR
-        uses: peter-evans/create-or-update-comment@v3
-        with:
-          issue-number: ${{ github.event.pull_request.number }}
-          body: |
-            📝 Preview deployment is ready!
-            URL: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/pr-preview/${{ github.event.pull_request.number }}/
-            
-            _Last updated: ${{ github.event.pull_request.updated_at }}_
-          comment-id: ${{ steps.find-comment.outputs.comment-id }}
-          edit-mode: replace
+          source-dir: ./frontend/out
+          preview-branch: gh-pages
+          umbrella-dir: pr-preview
+          action: deploy
