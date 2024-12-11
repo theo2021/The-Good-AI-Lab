@@ -1,5 +1,5 @@
-/* eslint-disable @typescript-eslint/no-require-imports */
 /* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint @typescript-eslint/no-require-imports: "off" */
 const reactPlugin = require("eslint-plugin-react");
 const typescriptPlugin = require("@typescript-eslint/eslint-plugin");
 const eslintPluginPrettierRecommended = require("eslint-plugin-prettier/recommended");
@@ -38,6 +38,7 @@ const config = [
       "no-unused-vars": "warn",
       "no-console": "off",
       "eol-last": ["error", "always"],
+      "@typescript-eslint/no-require-imports": "off",
     },
     settings: {
       react: {
