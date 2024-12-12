@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Raleway } from "next/font/google";
 import "./globals.css";
+import { Navigation } from "@/components/layout/Navigation";
+import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
 
 const raleway = Raleway({
   subsets: ["latin"],
@@ -21,7 +23,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${raleway.variable} antialiased`}>{children}</body>
+      <body className={`${raleway.variable} antialiased`}>
+        <SidebarProvider defaultOpen={false}>
+          <Navigation />
+          <main>
+            <SidebarTrigger />
+            {children}
+          </main>
+        </SidebarProvider>
+      </body>
     </html>
   );
 }
