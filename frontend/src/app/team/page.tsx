@@ -15,7 +15,7 @@ export default function TeamPage() {
         />
       </Head>
 
-      <main className="max-w-7xl mx-auto px-4 py-12" style={{ }}>
+      <main className="max-w-7xl mx-auto px-4 py-12">
         <header className="mb-12">
           <h1 className="text-3xl font-extrabold text-gray-300">Our Team</h1>
           <p className="text-gray-200 text-sm mt-2">
