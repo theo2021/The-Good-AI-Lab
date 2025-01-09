@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Sprout, Menu, X } from 'lucide-react';
 import ThemeToggle from './ThemeToggle';
@@ -12,7 +12,7 @@ export default function Navbar() {
         <div className="flex justify-between h-16">
           <Link to="/" className="flex items-center">
             <Sprout className="h-8 w-8 text-green-500" />
-            <span className="ml-2 text-xl font-semibold dark:text-white">The <span className="bg-gradient-to-r from-green-400 to-green-600 bg-clip-text text-transparent">Good</span> AI Lab</span>
+            <span className="ml-2 text-xl font-semibold dark:text-white">The Good AI Lab</span>
           </Link>
 
           {/* Mobile menu button */}
@@ -33,9 +33,9 @@ export default function Navbar() {
             <Link to="/team" className="text-gray-700 dark:text-gray-200 hover:text-green-500">
               Team
             </Link>
-            <Link to="/research" className="text-gray-700 dark:text-gray-200 hover:text-green-500">
+            {/* <Link to="/research" className="text-gray-700 dark:text-gray-200 hover:text-green-500">
               Research
-            </Link>
+            </Link> */}
             <ThemeToggle />
             <Link
               to="https://discord.gg/54MS3tPXEQ"
@@ -64,26 +64,19 @@ export default function Navbar() {
               >
                 Team
               </Link>
-              <Link
+              {/* <Link
                 to="/research"
                 className="block text-gray-700 dark:text-gray-200 hover:text-green-500 py-2"
                 onClick={() => setIsOpen(false)}
               >
                 Research
-              </Link>
+              </Link> */}
               <div className="py-2">
                 <ThemeToggle />
               </div>
               <Link
-                to="/#cta"
+                to="https://discord.gg/54MS3tPXEQ"
                 className="block bg-green-500 text-white px-4 py-2 rounded-md hover:bg-green-600 transition-colors"
-                onClick={e => {
-                  setIsOpen(false);
-                  if (window.location.pathname === '/') {
-                    e.preventDefault();
-                    document.getElementById('cta')?.scrollIntoView({ behavior: 'smooth' });
-                  }
-                }}
               >
                 Get Involved
               </Link>

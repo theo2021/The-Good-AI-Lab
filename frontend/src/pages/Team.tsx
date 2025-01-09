@@ -7,35 +7,11 @@ export default function Team() {
       role: 'Founder & Lead Researcher',
       image:
         '/images/team/pier.jpeg',
-      bio: 'Originally from Bologna, with a long history of social and political engagement. AI researcher and engineer collaborating with various universities including UniBo, KTH, University of Toronto, TU Munich, and ETH Zurich.',
+      bio: 'Originally from Bologna, with a long history of social and political engagement. AI researcher and engineer collaborating with various universities including UniBo, KTH, and TU Munich.',
       expertise: ['AI Research', 'Social Impact', 'Project Management'],
       links: {
-        scholar: 'https://scholar.google.com',
-        linkedin: 'https://linkedin.com',
-      },
-    },
-    {
-      name: 'Lorenzo Andraghetti',
-      role: 'Principal Research Scientist',
-      image:
-        '/images/team/lorenzo.jpeg',
-      bio: 'Leading research in computer vision and autonomous systems. Previously at Stanford AI Lab and Google Research.',
-      expertise: ['Computer Vision', 'Deep Learning', 'Robotics'],
-      links: {
-        scholar: 'https://scholar.google.com',
-        linkedin: 'https://linkedin.com',
-      },
-    },
-    {
-      name: 'Michael Roberts',
-      role: 'Senior AI Researcher',
-      image:
-        'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&h=400&q=80',
-      bio: 'Specializing in reinforcement learning and adaptive systems. PhD from MIT, previously at DeepMind.',
-      expertise: ['Reinforcement Learning', 'Adaptive AI', 'Neural Networks'],
-      links: {
-        scholar: 'https://scholar.google.com',
-        linkedin: 'https://linkedin.com',
+        scholar: 'https://scholar.google.com/citations?user=t55rm6EAAAAJ&hl=en',
+        linkedin: 'https://www.linkedin.com/in/pierluigidovesi/',
       },
     },
   ];
@@ -61,8 +37,8 @@ export default function Team() {
               <div className="relative">
                 <img className="h-64 w-full object-cover" src={member.image} alt={member.name} />
                 <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-6">
-                  <h3 className="text-2xl font-bold text-white">{member.name}</h3>
-                  <p className="text-green-400 font-medium">{member.role}</p>
+                  <h3 className="text-2xl font-bold text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">{member.name}</h3>
+                  <p className="text-green-400 font-medium drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">{member.role}</p>
                 </div>
               </div>
               <div className="p-6 flex flex-col flex-grow">
