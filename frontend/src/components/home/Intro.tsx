@@ -1,5 +1,4 @@
-import React from 'react';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Sprout } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export default function Intro() {
@@ -8,16 +7,23 @@ export default function Intro() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="lg:flex lg:items-center lg:gap-12">
           <div className="lg:w-1/2 mx-10">
-            <h1 className="text-5xl font-bold text-gray-900 dark:text-white mb-6">
-              The Good AI Lab
-              <br />
-              <span className="text-green-500">Shaping Our Future</span>
+            <h1 className="text-5xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-2">
+              <Sprout className="h-14 w-14 text-green-500" />
+              <span>The <span className="bg-gradient-to-r from-green-400 to-green-600 bg-clip-text text-transparent">Good</span> AI Lab</span>
             </h1>
-            <p className="text-xl text-gray-600 dark:text-gray-300 mb-8">
-              AI is changing every aspect of our society, including how we think about ourselves and
-              our potential. The question is not just what AI can do, but how it should do it.
-            </p>
-            <div className="flex gap-4">
+              <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="max-w-3xl mx-auto">
+                  <div className="prose dark:prose-invert">
+                    <p className="text-2xl text-gray-600 dark:text-gray-300">
+                      We're a <span className="bg-gradient-to-r from-green-400 to-green-600 bg-clip-text text-transparent font-bold">research collective</span> ensuring AI benefits <span className="bg-gradient-to-r from-green-400 to-green-600 bg-clip-text text-transparent font-bold">everyone</span>.
+                    </p>
+                    <p className="text-2xl text-gray-600 dark:text-gray-300 mt-8">
+                      Building <span className="bg-gradient-to-r from-green-400 to-green-600 bg-clip-text text-transparent font-bold">responsible AI</span> at the intersection of <span className="bg-gradient-to-r from-green-400 to-green-600 bg-clip-text text-transparent font-bold">innovation</span> and <span className="bg-gradient-to-r from-green-400 to-green-600 bg-clip-text text-transparent font-bold">social good</span>.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            <div className="flex gap-4 mt-8 mx-6">
               <Link
                 to="/manifesto"
                 className="bg-green-500 text-white px-6 py-3 rounded-md hover:bg-green-600 transition-colors flex items-center"
@@ -33,11 +39,11 @@ export default function Intro() {
               </Link>
             </div>
           </div>
-          <div className="hidden lg:block lg:w-2/5 mt-10 lg:mt-0">
+          <div className="hidden lg:block lg:w-1/3 mt-10 lg:mt-0">
             <div className="relative">
               <div className="absolute -inset-4 bg-green-500/20 rounded-lg blur-xl"></div>
               <img
-                src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=800&q=80"
+                src="/images/seedling.png"
                 alt="AI Research"
                 className="relative rounded-lg shadow-2xl"
               />

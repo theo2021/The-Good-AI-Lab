@@ -2,6 +2,13 @@ import { Link } from 'react-router-dom';
 import { Sprout } from 'lucide-react';
 
 export default function Footer() {
+  const handleClick = (to: string) => {
+    if (to.includes('#')) {
+      return;
+    }
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
     <footer className="bg-gray-900 text-gray-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -40,7 +47,11 @@ export default function Footer() {
               <ul className="space-y-2">
                 {section.links.map((link, linkIndex) => (
                   <li key={linkIndex}>
-                    <Link to={link.to} className="hover:text-green-500 transition-colors">
+                    <Link 
+                      to={link.to} 
+                      className="hover:text-green-500 transition-colors"
+                      onClick={() => handleClick(link.to)}
+                    >
                       {link.name}
                     </Link>
                   </li>

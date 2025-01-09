@@ -1,5 +1,6 @@
-import React from 'react';
+import { useEffect } from 'react';
 import { Users, ExternalLink } from 'lucide-react';
+import { useLocation } from 'react-router-dom';
 
 interface CommunityPaper {
   title: string;
@@ -26,6 +27,17 @@ const communityPapers: CommunityPaper[] = [
 ];
 
 export default function CommunityPapers() {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash === '#community') {
+      const element = document.getElementById('community');
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  }, [location]);
+
   return (
     <div className="py-16 bg-white dark:bg-gray-800" id="community">
       <div className="max-w-7xl mx-auto px-4">

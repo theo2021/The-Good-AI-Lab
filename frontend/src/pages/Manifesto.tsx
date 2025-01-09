@@ -9,7 +9,7 @@ export default function Manifesto() {
           <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">Our Manifesto</h1>
         </div>
       </div>
-      <div className="prose prose-lg mx-auto mb-20 dark:prose-invert prose-headings:text-gray-900 dark:prose-headings:text-white prose-p:text-gray-600 dark:prose-p:text-gray-300 prose-li:text-gray-600 dark:prose-li:text-gray-300 prose-h3:text-green-600 dark:prose-h3:text-green-500">
+      <div className="prose prose-lg mx-auto mb-20 dark:prose-invert prose-headings:text-gray-900 dark:prose-headings:text-white prose-p:text-gray-600 dark:prose-p:text-gray-300 prose-li:text-gray-600 dark:prose-li:text-gray-300 prose-h3:text-green-600 dark:prose-h3:text-green-500 max-w-8xl">
         <h3>Who We Are</h3>
         <p>
           We are a non-profit AI research collective—scientists, professors, engineers, researchers,

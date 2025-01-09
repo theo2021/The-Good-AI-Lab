@@ -6,9 +6,33 @@ export default function Team() {
       name: 'Pier Luigi Dovesi',
       role: 'Founder & Lead Researcher',
       image:
-        'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=400&h=400&q=80',
+        '/images/team/pier.jpeg',
       bio: 'Originally from Bologna, with a long history of social and political engagement. AI researcher and engineer collaborating with various universities including UniBo, KTH, University of Toronto, TU Munich, and ETH Zurich.',
       expertise: ['AI Research', 'Social Impact', 'Project Management'],
+      links: {
+        scholar: 'https://scholar.google.com',
+        linkedin: 'https://linkedin.com',
+      },
+    },
+    {
+      name: 'Lorenzo Andraghetti',
+      role: 'Principal Research Scientist',
+      image:
+        '/images/team/lorenzo.jpeg',
+      bio: 'Leading research in computer vision and autonomous systems. Previously at Stanford AI Lab and Google Research.',
+      expertise: ['Computer Vision', 'Deep Learning', 'Robotics'],
+      links: {
+        scholar: 'https://scholar.google.com',
+        linkedin: 'https://linkedin.com',
+      },
+    },
+    {
+      name: 'Michael Roberts',
+      role: 'Senior AI Researcher',
+      image:
+        'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&h=400&q=80',
+      bio: 'Specializing in reinforcement learning and adaptive systems. PhD from MIT, previously at DeepMind.',
+      expertise: ['Reinforcement Learning', 'Adaptive AI', 'Neural Networks'],
       links: {
         scholar: 'https://scholar.google.com',
         linkedin: 'https://linkedin.com',
@@ -32,7 +56,7 @@ export default function Team() {
           {teamMembers.map((member, index) => (
             <div
               key={index}
-              className="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
+              className="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow flex flex-col h-full"
             >
               <div className="relative">
                 <img className="h-64 w-full object-cover" src={member.image} alt={member.name} />
@@ -41,19 +65,21 @@ export default function Team() {
                   <p className="text-green-400 font-medium">{member.role}</p>
                 </div>
               </div>
-              <div className="p-6">
-                <p className="text-gray-600 dark:text-gray-300 mb-4">{member.bio}</p>
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {member.expertise.map((skill, idx) => (
-                    <span
-                      key={idx}
-                      className="bg-green-50 dark:bg-green-900/30 text-green-700 dark:text-green-300 px-3 py-1 rounded-full text-sm"
-                    >
-                      {skill}
-                    </span>
-                  ))}
+              <div className="p-6 flex flex-col flex-grow">
+                <div className="flex-grow space-y-4">
+                  <p className="text-gray-600 dark:text-gray-300 line-clamp-10">{member.bio}</p>
+                  <div className="flex flex-wrap gap-2">
+                    {member.expertise.map((skill, idx) => (
+                      <span
+                        key={idx}
+                        className="bg-green-50 dark:bg-green-900/30 text-green-700 dark:text-green-300 px-2 py-1 rounded-full text-xs"
+                      >
+                        {skill}
+                      </span>
+                    ))}
+                  </div>
                 </div>
-                <div className="flex gap-4">
+                <div className="flex gap-4 mt-6 pt-4 border-t border-gray-200 dark:border-gray-700">
                   <a
                     href={member.links.scholar}
                     target="_blank"

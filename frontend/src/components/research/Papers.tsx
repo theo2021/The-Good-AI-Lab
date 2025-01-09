@@ -85,15 +85,15 @@ export default function Papers() {
               key={index}
               className="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
             >
-              <div className="md:flex">
-                <div className="md:flex-shrink-0">
+              <div className="relative md:flex">
+                <div className="md:absolute md:inset-y-0 md:w-96 h-64 md:h-full">
                   <img
-                    className="h-48 w-full object-cover md:w-48"
+                    className="w-full h-full object-cover"
                     src={paper.image}
                     alt={paper.title}
                   />
                 </div>
-                <div className="p-8">
+                <div className="p-8 md:ml-96">
                   <div className="flex items-center gap-2 text-sm text-green-600 dark:text-green-400 mb-2">
                     <BookOpen className="h-4 w-4" />
                     <span>{paper.conference}</span>

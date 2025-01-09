@@ -1,4 +1,3 @@
-import React from 'react';
 import { Users2, Share, Handshake } from 'lucide-react';
 
 export default function Approach() {

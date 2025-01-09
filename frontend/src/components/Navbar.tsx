@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Sprout, Menu, X } from 'lucide-react';
 import ThemeToggle from './ThemeToggle';
@@ -12,7 +12,7 @@ export default function Navbar() {
         <div className="flex justify-between h-16">
           <Link to="/" className="flex items-center">
             <Sprout className="h-8 w-8 text-green-500" />
-            <span className="ml-2 text-xl font-semibold dark:text-white">The Good AI Lab</span>
+            <span className="ml-2 text-xl font-semibold dark:text-white">The <span className="bg-gradient-to-r from-green-400 to-green-600 bg-clip-text text-transparent">Good</span> AI Lab</span>
           </Link>
 
           {/* Mobile menu button */}
