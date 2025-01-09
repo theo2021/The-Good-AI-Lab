@@ -44,7 +44,7 @@ jobs:
       - name: Deploy preview
         uses: rossjrw/pr-preview-action@v1
         with:
-          source-dir: ./frontend/out
+          source-dir: ./frontend/dist
           preview-branch: gh-pages
           umbrella-dir: pr-preview
           action: deploy

@@ -37,12 +37,12 @@ jobs:
         working-directory: frontend
         env:
           NODE_ENV: production
-          NEXT_PUBLIC_BASE_PATH: /
+          VITE_BASE_URL: /
         run: pnpm build
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: frontend/out
+          folder: frontend/dist
           branch: gh-pages
           clean: true
