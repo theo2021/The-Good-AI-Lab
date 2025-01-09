@@ -1,5 +1,5 @@
 import React from 'react';
-import { Microscope, Users, HandHeart } from 'lucide-react';
+import { Microscope } from 'lucide-react';
 
 export default function Work() {
   const areas = [
@@ -10,7 +10,7 @@ export default function Work() {
         'We focus on foundational academic AI research. We publish in open venues, share our code, and push the field forward.',
     },
     {
-      icon: <Users className="h-8 w-8 text-green-500" />,
+      icon: <Microscope className="h-8 w-8 text-green-500" />,
       title: 'Good AI',
       description:
         'We call out biases, support frameworks that keep AI honest, and build fairness, transparency, and accountability into every model we touch.',

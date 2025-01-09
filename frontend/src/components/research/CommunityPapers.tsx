@@ -23,17 +23,6 @@ const communityPapers: CommunityPaper[] = [
     image:
       'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=800&q=80',
   },
-  {
-    title: 'Multi-Modal Learning for Robust Perception',
-    authors: ['David Chen', 'Sarah Williams'],
-    institution: 'University of Toronto',
-    year: 2023,
-    abstract:
-      'Investigating the integration of multiple sensory inputs for more robust perception in autonomous systems.',
-    link: '#',
-    image:
-      'https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80',
-  },
 ];
 
 export default function CommunityPapers() {

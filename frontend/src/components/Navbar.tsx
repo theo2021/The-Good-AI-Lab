@@ -38,14 +38,8 @@ export default function Navbar() {
             </Link>
             <ThemeToggle />
             <Link
-              to="/#cta"
+              to="https://discord.gg/54MS3tPXEQ"
               className="bg-green-500 text-white px-4 py-2 rounded-md hover:bg-green-600 transition-colors"
-              onClick={e => {
-                if (window.location.pathname === '/') {
-                  e.preventDefault();
-                  document.getElementById('cta')?.scrollIntoView({ behavior: 'smooth' });
-                }
-              }}
             >
               Get Involved
             </Link>

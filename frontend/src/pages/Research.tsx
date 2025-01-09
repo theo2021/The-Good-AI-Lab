@@ -1,4 +1,3 @@
-import React from 'react';
 import Papers from '../components/research/Papers';
 import CommunityPapers from '../components/research/CommunityPapers';
 import { BookOpen } from 'lucide-react';

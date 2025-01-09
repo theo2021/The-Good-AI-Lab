@@ -27,32 +27,6 @@ const papers: Paper[] = [
     tags: ['Autonomous Driving', 'Adaptive Systems', 'Real-time Learning'],
     category: 'adaptive-agents',
   },
-  {
-    title: 'Vision Transformers for Dynamic Scene Understanding',
-    authors: ['Emma Thompson', 'Pier Luigi Dovesi', 'Alex Kumar'],
-    conference: 'CVPR 2023',
-    year: 2023,
-    abstract:
-      'A new architecture for vision transformers that excels at understanding dynamic scenes, with applications in autonomous driving and robotics.',
-    link: '#',
-    image:
-      'https://images.unsplash.com/photo-1527430253228-e93688616381?auto=format&fit=crop&w=800&q=80',
-    tags: ['Computer Vision', 'Transformers', 'Scene Understanding'],
-    category: 'vision',
-  },
-  {
-    title: 'Stable Diffusion: Advancing Text-to-Image Generation',
-    authors: ['Pier Luigi Dovesi', 'Michael Roberts'],
-    conference: 'ICLR 2024',
-    year: 2024,
-    abstract:
-      'Novel improvements to stable diffusion models, enhancing image quality and semantic understanding while reducing computational requirements.',
-    link: '#',
-    image:
-      'https://images.unsplash.com/photo-1519638399535-1b036603ac77?auto=format&fit=crop&w=800&q=80',
-    tags: ['Stable Diffusion', 'Text-to-Image', 'Deep Learning'],
-    category: 'stable-diffusion',
-  },
 ];
 
 export default function Papers() {

@@ -32,7 +32,7 @@ export default function Footer() {
             },
             {
               title: 'Get Involved',
-              links: [{ name: 'Join Us', to: '/#cta' }],
+              links: [{ name: 'Join Us on Discord', to: 'https://discord.gg/54MS3tPXEQ' }],
             },
           ].map((section, index) => (
             <div key={index} className="mx-10">

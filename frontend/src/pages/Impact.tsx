@@ -1,5 +1,4 @@
-import React from 'react';
-import { Target, Users, Globe, ArrowRight } from 'lucide-react';
+import { Target, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export default function Impact() {

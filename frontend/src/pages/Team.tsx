@@ -14,30 +14,6 @@ export default function Team() {
         linkedin: 'https://linkedin.com',
       },
     },
-    {
-      name: 'Sarah Chen',
-      role: 'Principal Research Scientist',
-      image:
-        'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=400&h=400&q=80',
-      bio: 'Leading research in computer vision and autonomous systems. Previously at Stanford AI Lab and Google Research.',
-      expertise: ['Computer Vision', 'Deep Learning', 'Robotics'],
-      links: {
-        scholar: 'https://scholar.google.com',
-        linkedin: 'https://linkedin.com',
-      },
-    },
-    {
-      name: 'Michael Roberts',
-      role: 'Senior AI Researcher',
-      image:
-        'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&h=400&q=80',
-      bio: 'Specializing in reinforcement learning and adaptive systems. PhD from MIT, previously at DeepMind.',
-      expertise: ['Reinforcement Learning', 'Adaptive AI', 'Neural Networks'],
-      links: {
-        scholar: 'https://scholar.google.com',
-        linkedin: 'https://linkedin.com',
-      },
-    },
   ];
 
   return (

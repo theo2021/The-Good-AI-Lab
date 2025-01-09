@@ -19,14 +19,13 @@ export default function Approach() {
       icon: <Handshake className="h-6 w-6 text-green-500" />,
       title: 'Partnerships',
       description:
-        'Hand-in-hand with charitable non-profit organisations, we promote and develop AI applications that drive tangible improvements — education, healthcare, humanitarian aid, environmental protection, and more.',
+        'In collaboration with non-profit organizations, we develop AI applications that drive improvements in education, healthcare, humanitarian aid, and environmental protection.',
     },
   ];
 
   return (
     <div className="py-20 bg-white dark:bg-gray-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl font-bold text-center mb-16 dark:text-white">How We Work</h2>
         <div className="grid md:grid-cols-3 gap-12">
           {methods.map((method, index) => (
             <div key={index} className="text-center">
