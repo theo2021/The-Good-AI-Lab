@@ -1,0 +1,12 @@
+members:
+  - name: Pier Luigi Dovesi
+    role: Founder & Lead Researcher
+    image: /images/team/pier.jpeg
+    bio: Originally from Bologna, with a long history of social and political engagement. AI researcher and engineer collaborating with various universities including UniBo, KTH, and TU Munich.
+    expertise:
+      - AI Research
+      - Social Impact
+      - Project Management
+    links:
+      scholar: https://scholar.google.com/citations?user=t55rm6EAAAAJ&hl=en
+      linkedin: https://www.linkedin.com/in/pierluigidovesi/ 

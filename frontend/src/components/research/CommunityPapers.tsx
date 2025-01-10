@@ -1,30 +1,10 @@
 import { useEffect } from 'react';
 import { Users, ExternalLink } from 'lucide-react';
 import { useLocation } from 'react-router-dom';
+import { CommunityPaper, validateCommunityPaper } from '../../types';
+import communityPapersData from '../../data/community-papers.yaml';
 
-interface CommunityPaper {
-  title: string;
-  authors: string[];
-  institution: string;
-  year: number;
-  abstract: string;
-  link: string;
-  image: string;
-}
-
-const communityPapers: CommunityPaper[] = [
-  {
-    title: 'Efficient Neural Networks for Edge Computing in Autonomous Systems',
-    authors: ['Maria Garcia', 'John Smith'],
-    institution: 'ETH Zurich',
-    year: 2023,
-    abstract:
-      'A novel approach to optimizing neural networks for edge devices, enabling real-time processing in autonomous systems.',
-    link: '#',
-    image:
-      'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=800&q=80',
-  },
-];
+const papers = communityPapersData.papers.filter(validateCommunityPaper);
 
 export default function CommunityPapers() {
   const location = useLocation();
@@ -48,7 +28,7 @@ export default function CommunityPapers() {
           </h2>
         </div>
         <div className="grid md:grid-cols-2 gap-8">
-          {communityPapers.map((paper, index) => (
+          {papers.map((paper: CommunityPaper, index: number) => (
             <div
               key={index}
               className="bg-gray-50 dark:bg-gray-700 rounded-xl shadow-lg overflow-hidden"

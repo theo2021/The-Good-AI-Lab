@@ -1,33 +1,9 @@
 import React from 'react';
 import { Newspaper } from 'lucide-react';
+import { NewsItem, validateNewsItem } from '../../types';
+import newsData from '../../data/news.yaml';
 
-interface NewsItem {
-  title: string;
-  source: string;
-  date: string;
-  excerpt: string;
-  link: string;
-  image: string;
-}
-
-const newsItems: NewsItem[] = [
-  {
-    title: "The Good AI Lab Pioneers New Approach to Autonomous Systems",
-    source: "Tech Review",
-    date: "March 15, 2024",
-    excerpt: "The research team has developed a groundbreaking method for real-time adaptation in autonomous systems...",
-    link: "#",
-    image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=800&q=80"
-  },
-  {
-    title: "Advancing AI for Social Good: Interview with Pier Luigi Dovesi",
-    source: "AI Weekly",
-    date: "March 10, 2024",
-    excerpt: "In an exclusive interview, the founder of The Good AI Lab discusses the importance of democratic AI...",
-    link: "#",
-    image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80"
-  }
-];
+const newsItems = newsData.news.filter(validateNewsItem);
 
 export default function NewsFeed() {
   return (
@@ -38,7 +14,7 @@ export default function NewsFeed() {
           <h2 className="text-3xl font-bold text-gray-900 dark:text-white">In the News</h2>
         </div>
         <div className="grid md:grid-cols-2 gap-8">
-          {newsItems.map((item, index) => (
+          {newsItems.map((item: NewsItem, index: number) => (
             <a
               key={index}
               href={item.link}

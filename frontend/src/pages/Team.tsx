@@ -1,21 +1,10 @@
 import { Linkedin, BookOpenCheck, Users } from 'lucide-react';
+import { TeamMember, validateTeamMember } from '../types';
+import teamData from '../data/team.yaml';
+
+const members = teamData.members.filter(validateTeamMember);
 
 export default function Team() {
-  const teamMembers = [
-    {
-      name: 'Pier Luigi Dovesi',
-      role: 'Founder & Lead Researcher',
-      image:
-        '/images/team/pier.jpeg',
-      bio: 'Originally from Bologna, with a long history of social and political engagement. AI researcher and engineer collaborating with various universities including UniBo, KTH, and TU Munich.',
-      expertise: ['AI Research', 'Social Impact', 'Project Management'],
-      links: {
-        scholar: 'https://scholar.google.com/citations?user=t55rm6EAAAAJ&hl=en',
-        linkedin: 'https://www.linkedin.com/in/pierluigidovesi/',
-      },
-    },
-  ];
-
   return (
     <div className="pt-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -29,7 +18,7 @@ export default function Team() {
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
-          {teamMembers.map((member, index) => (
+          {members.map((member: TeamMember, index: number) => (
             <div
               key={index}
               className="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow flex flex-col h-full"
@@ -45,7 +34,7 @@ export default function Team() {
                 <div className="flex-grow space-y-4">
                   <p className="text-gray-600 dark:text-gray-300 line-clamp-10">{member.bio}</p>
                   <div className="flex flex-wrap gap-2">
-                    {member.expertise.map((skill, idx) => (
+                    {member.expertise.map((skill: string, idx: number) => (
                       <span
                         key={idx}
                         className="bg-green-50 dark:bg-green-900/30 text-green-700 dark:text-green-300 px-2 py-1 rounded-full text-xs"
@@ -56,24 +45,28 @@ export default function Team() {
                   </div>
                 </div>
                 <div className="flex gap-4 mt-6 pt-4 border-t border-gray-200 dark:border-gray-700">
-                  <a
-                    href={member.links.scholar}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center text-gray-600 dark:text-gray-300 hover:text-green-500 dark:hover:text-green-400"
-                  >
-                    <BookOpenCheck className="h-5 w-5 mr-1" />
-                    Scholar
-                  </a>
-                  <a
-                    href={member.links.linkedin}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center text-gray-600 dark:text-gray-300 hover:text-green-500 dark:hover:text-green-400"
-                  >
-                    <Linkedin className="h-5 w-5 mr-1" />
-                    LinkedIn
-                  </a>
+                  {member.links.scholar && (
+                    <a
+                      href={member.links.scholar}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center text-gray-600 dark:text-gray-300 hover:text-green-500 dark:hover:text-green-400"
+                    >
+                      <BookOpenCheck className="h-5 w-5 mr-1" />
+                      Scholar
+                    </a>
+                  )}
+                  {member.links.linkedin && (
+                    <a
+                      href={member.links.linkedin}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center text-gray-600 dark:text-gray-300 hover:text-green-500 dark:hover:text-green-400"
+                    >
+                      <Linkedin className="h-5 w-5 mr-1" />
+                      LinkedIn
+                    </a>
+                  )}
                 </div>
               </div>
             </div>
