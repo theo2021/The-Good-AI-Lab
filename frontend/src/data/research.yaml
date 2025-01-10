@@ -1,0 +1,15 @@
+research:
+  - title: Adaptive Agents
+    abstract: How can AI agents adapt to ever-changing environments? By seamlessly integrating advanced perception, Q&A, and control strategies—alongside techniques like test-time training, model merging, and on-the-fly knowledge updates—we aim to develop robust, lifelong-learning systems that continuously refine their capabilities in response to new rules, tasks, and scenarios.
+    image: /images/research/adaptive-agents.webp
+    tags:
+      - Agents
+      - Domain Adaptation
+      - Continual Learning
+  - title: Scene Reconstruction
+    abstract: Text-to-image diffusion models excel at generating high-quality visuals, but reconstructing entire scenarios is challenging due to greater spatial complexity. In this project, we propose a pipeline that synthesizes realistic 3D environments from minimal input, combining texturing and semantic preservation with pathfinding and 3D Gaussian Splatting.
+    image: /images/research/scene-reconstruction.webp
+    tags:
+      - Scene Reconstruction
+      - Diffusion
+      - 3D Gaussian Splatting

@@ -1,12 +1,183 @@
 members:
   - name: Pier Luigi Dovesi
-    role: Founder & Lead Researcher
-    image: /images/team/pier.jpeg
-    bio: Originally from Bologna, with a long history of social and political engagement. AI researcher and engineer collaborating with various universities including UniBo, KTH, and TU Munich.
-    expertise:
-      - AI Research
-      - Social Impact
-      - Project Management
+    role: AI Scientist @ AMD Silo AI
+    titles: 
+      - Chair of the Board
+    image: /images/team/pier.jpg
+    bio: Pier is an AI scientist and researcher with a background in autonomous driving and generative AI, collaborating with universities and research labs worldwide. Pier has a long history of social engagement, actively contributing to initiatives that foster community development and advocate for social change
     links:
       scholar: https://scholar.google.com/citations?user=t55rm6EAAAAJ&hl=en
-      linkedin: https://www.linkedin.com/in/pierluigidovesi/ 
+      linkedin: https://www.linkedin.com/in/pierluigidovesi/
+  
+  - name: Jussi Karlgren
+    role: AI Scientist @ AMD Silo AI
+    titles:
+      - Board Member
+    image: /images/team/jussi.jpg
+    bio: Jussi is a computational linguist and AI professor with a PhD in Computational Linguistics from Stockholm University. He specializes in natural language understanding and multilingual language processing, blending academic expertise with industry impact to improve human-machine interaction.
+    links:
+      scholar: https://scholar.google.com/citations?user=o7cz97l31z8J
+      linkedin: https://www.linkedin.com/in/jussikarlgren/
+  
+
+  - name: Saroosh Shabbir
+    role: AI Scientist @ AMD Silo AI
+    titles:
+      - Board Member
+      - Secretary
+    image: /images/team/saroosh.jpg
+    bio: Saroosh holds a PhD in Quantum Optics from KTH. With extensive industry experience, she brings a broad spectrum of expertise spanning deep learning, operations research and quantum computation.
+    links:
+      scholar: https://scholar.google.com/citations?user=qo8efuQAAAAJ
+      linkedin: "https://www.linkedin.com/in/sarooshsh/"
+
+  - name: Lorenzo Andraghetti
+    role: AI Engineer @ AMD Silo AI
+    titles:
+      - Board Member
+      - Treasurer
+    image: /images/team/lorenzo.png
+    bio: "Lorenzo is a senior AI engineer and full-stack software developer with a strong passion for game development. In his most recent engagements, Lorenzo has helped develop large language models for resource scarce Nordic languages."
+    links:
+      scholar: https://scholar.google.com/citations?user=l27rGkIAAAAJ
+      linkedin: https://www.linkedin.com/in/andraghetti/
+
+  - name: Theodor Panagiotakopoulos
+    role: ML Engineer @ King
+    titles:
+      - Board Member
+      - Auditor
+    image: /images/team/theo.jpeg
+    bio: Theo is a machine learning engineer with a strong background in MLOps, combining research insights with practical engineering skills. He is an experienced researcher in domain adaptation, bridging cutting-edge AI advancements with efficient, scalable deployments.
+    links:
+      scholar: https://scholar.google.com/citations?user=868888AAAAAJ
+      linkedin: https://www.linkedin.com/in/theopana/
+
+  - name: Carlo Rapisarda
+    role: AI Engineer @ Bontouch
+    titles:
+      - Board Member
+    image: /images/team/carlo.jpeg
+    bio: Carlo is an experienced AI engineer, software architect, and tech lead with deep expertise in both mobile applications and a range of AI solutions. He has led multiple high-impact projects from design to production, delivering innovative and scalable products across diverse domains.
+    links:
+      scholar: https://scholar.google.com/citations?user=1hsIvRoAAAAJ
+      linkedin: https://www.linkedin.com/in/carlorapisarda/
+
+  - name: Hedvig Kjellström
+    role: Professor @ KTH
+    titles:
+      - Advisor
+    image: /images/team/hedvig.jpg
+    bio: Hedvig is a professor and AI researcher with expertise in computer vision, machine learning, and human behavior modeling. She focuses on developing AI systems that interpret and interact with the physical and social world, bridging theoretical advances with real-world applications.
+    links:
+      scholar: https://scholar.google.com/citations?user=wr3CtKAAAAAJ
+      linkedin: https://www.linkedin.com/in/hedvig-kjellstrom/
+
+  - name: Matteo Poggi
+    role: Assistant Professor @ University of Bologna
+    titles:
+      - Advisor
+    image: /images/team/matteo.jpeg
+    bio: Matteo is an assistant professor and AI researcher at the University of Bologna, specializing in computer vision and deep learning. His work focuses on 3D perception, stereo vision, and scene understanding, with applications ranging from robotics to autonomous systems.
+    links:
+      scholar: https://scholar.google.com/citations?user=bve0VwgAAAAJ
+      linkedin: https://www.linkedin.com/in/matteo-poggi-71046a4a/
+
+  - name: Riina Mathlin
+    role: People Specialist @ AMD Silo AI
+    titles:
+      - Community Manager
+    image: /images/team/riina.jpeg
+    bio: Riina is a people specialist responsible for employee wellbeing, engagement, and lifecycle management. She brings expertise in organisational development and process improvement. She holds MSc in Economics and Business Administration and a BBA in HR Management.
+    links:
+      linkedin: https://www.linkedin.com/in/riinamathlin/
+
+  - name: Alexander Aurell
+    role: AI Scientist and Manager @ AMD Silo AI
+    titles:
+      - Researcher
+    image: /images/team/alexander.jpg
+    bio: Alexander is an AI scientist and manager with a PhD in mathematics from KTH and postdoctoral work at Princeton, specializing in game theory and modeling for finance and epidemiology. He also brings extensive machine learning expertise for logistics
+    links:
+      scholar: https://scholar.google.com/citations?user=fRoAXJAAAAAJ
+      linkedin: https://www.linkedin.com/in/alexander-aurell/
+
+  - name: Mattia Segù
+    role: PhD Candidate @ ETH & Google
+    titles:
+      - Researcher
+    image: /images/team/mattia.jpeg
+    bio: Mattia is a researcher specializing in computer vision and machine learning. His work focuses on label-efficient multiple object tracking, domain generalization, and uncertainty estimation. Mattia combines deep theoretical expertise with practical applications, contributing to advancements in AI and computer vision.
+    links:
+      scholar: https://scholar.google.com/citations?user=dwX7yWkAAAAJ
+      linkedin: https://www.linkedin.com/in/mattia-segu/
+
+  - name: Silvio Mazzucco
+    role: Computer Vision Researcher @ Huawei
+    titles:
+      - Researcher
+    image: /images/team/silvio.jpeg
+    bio: Silvio is a computer vision researcher at Huawei. Previously at the Computer Vision Lab at ETH Zurich, he specialized in multimodal AI and domain adaptation.
+    links:
+      scholar: 
+      linkedin: https://www.linkedin.com/in/silvio-mazzucco-7a9672234/
+
+  - name: Gianluca Villani
+    role: PhD Candidate @ University of Toronto
+    titles:
+      - Researcher
+    image: /images/team/gianluca.jpeg
+    bio: Gianluca is a researcher at the University of Toronto, specializing in the modeling, analysis, and control of biological systems. He combines expertise in AI, mathematics, and control to tackle complex interdisciplinary challenges.
+    links:
+      scholar:
+      linkedin: https://www.linkedin.com/in/gianluca-villani-54112b14b/
+
+  - name: Linus Härenstam-Nielsen
+    role: PhD Candidate @ TU Munich
+    titles:
+      - Researcher
+    image: /images/team/linus.jpeg
+    bio: Linus is a researcher with extensive expertise in computer vision, focusing on learning-based methods, SLAM, and 3D representation. With a strong background in mathematics, robotics, and autonomous systems, he bridges academic research and industry innovation.
+    links:
+      scholar: https://scholar.google.com/citations?user=HWAAVg8AAAAJ
+      linkedin: https://www.linkedin.com/in/linus-h%C3%A4renstam-nielsen-41997659/
+
+  - name: Leonardo Ravaglia
+    role: R&D Researcher @ University of Bologna
+    titles:
+      - Researcher
+    image: /images/team/leonardo.jpeg
+    bio: Leonardo is a researcher and AI engineer with expertise in autonomous driving and simulation environments. He brings experience in on-device training for ultra-low-power AI accelerators and continual learning, developed during his time at the University of Bologna.
+    links:
+      scholar: https://scholar.google.com/citations?user=hrYEGQIAAAAJ
+      linkedin: https://www.linkedin.com/in/leonardo-ravaglia/
+
+  - name: Marc Botet Colomer
+    role: Deep Learning Engineer @ Univrses
+    titles:
+      - Researcher
+    image: /images/team/marc.jpeg
+    bio: Marc is an AI R&D deep learning engineer with a strong background in autonomous driving. He is an active researcher specializing in domain adaptation and real-time training.
+    links:
+      scholar: https://scholar.google.com/citations?user=-eA8kwwAAAAJ
+      linkedin: https://www.linkedin.com/in/marc-botet-colomer/
+
+  - name: Carl Persson
+    role: AI Engineer @ AMD Silo AI
+    titles:
+      - Researcher
+    image: /images/team/carl.jpeg
+    bio: Carl is an AI engineer specializing in GPU optimization and diffusion models. He is also an researcher, focusing on 3D generative models and domain adaptation.
+    links:
+      scholar: 
+      linkedin: https://www.linkedin.com/in/carl-persson1/
+
+  - name: João Frederico Carvalho
+    role: AI Scientist @ Univrses
+    titles:
+      - Researcher
+    image: /images/team/joao.jpeg
+    bio: João holds a PhD in Robotics and Computer Vision from KTH. He is a senior scientist and software developer with extensive experience in autonomous driving, combining deep technical expertise with practical applications in cutting-edge technologies.
+    links:
+      scholar: https://scholar.google.se/citations?user=-GqJRNoAAAAJ
+      linkedin: https://www.linkedin.com/in/jo%C3%A3o-frederico-carvalho-27665367/

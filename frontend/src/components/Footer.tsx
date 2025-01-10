@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { Sprout } from 'lucide-react';
+import { mailto } from '../types';
 
 export default function Footer() {
   const handleClick = (to: string) => {
@@ -18,15 +19,22 @@ export default function Footer() {
               <Sprout className="h-6 w-6 text-green-500" />
               <span className="ml-2 text-lg font-semibold text-white">The <span className="bg-gradient-to-r from-green-400 to-green-600 bg-clip-text text-transparent">Good</span> AI Lab</span>
             </div>
-            <p className="text-sm">
-              Building a better future through ethical AI development and community engagement.
+            <p className="text-xs">
+              We are an independent AI lab working on foundational{' '}
+                <span className="bg-gradient-to-r from-green-400 to-green-600 bg-clip-text text-transparent font-bold">
+                  AI research
+                </span>{' '}
+                and innovation projects for{' '}
+                <span className="bg-gradient-to-r from-green-400 to-green-600 bg-clip-text text-transparent font-bold">
+                  social good
+                </span>.
             </p>
           </div>
           {[
             {
               title: 'About',
               links: [
-                { name: 'Organization', to: '/manifesto' },
+                { name: 'Manifesto', to: '/manifesto' },
                 { name: 'Team', to: '/team' },
               ],
             },
@@ -34,12 +42,12 @@ export default function Footer() {
               title: 'Resources',
               links: [
                 { name: 'Research', to: '/research' },
-                // { name: 'Community Papers', to: '/research#community' },
+                { name: 'Community Papers', to: '/research#community' },
               ],
             },
             {
               title: 'Get Involved',
-              links: [{ name: 'Join us on Discord', to: 'https://discord.gg/54MS3tPXEQ' }],
+              links: [{ name: 'Contact us', to: mailto }],
             },
           ].map((section, index) => (
             <div key={index} className="mx-10">

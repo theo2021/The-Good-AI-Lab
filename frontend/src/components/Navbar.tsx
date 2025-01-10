@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Sprout, Menu, X } from 'lucide-react';
 import ThemeToggle from './ThemeToggle';
+import { mailto } from '../types';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -38,7 +39,7 @@ export default function Navbar() {
             </Link>
             <ThemeToggle />
             <Link
-              to="https://discord.gg/54MS3tPXEQ"
+              to={mailto}
               className="bg-green-500 text-white px-4 py-2 rounded-md hover:bg-green-600 transition-colors"
             >
               Get Involved
@@ -75,7 +76,7 @@ export default function Navbar() {
                 <ThemeToggle />
               </div>
               <Link
-                to="https://discord.gg/54MS3tPXEQ"
+                to={mailto}
                 className="block bg-green-500 text-white px-4 py-2 rounded-md hover:bg-green-600 transition-colors"
               >
                 Get Involved
