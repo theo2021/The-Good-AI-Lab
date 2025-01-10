@@ -37,9 +37,6 @@ jobs:
 
       - name: Build
         working-directory: frontend
-        env:
-          NODE_ENV: production
-          VITE_BASE_URL: /The-Good-AI-Lab/pr-preview/pr-${{ github.event.pull_request.number }}/
         run: pnpm build
 
       - name: Deploy preview
@@ -49,5 +46,4 @@ jobs:
           preview-branch: gh-pages
           umbrella-dir: pr-preview
           action: deploy
-          custom-url: https://theo2021.github.io
 
