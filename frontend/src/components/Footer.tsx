@@ -34,12 +34,12 @@ export default function Footer() {
               title: 'Resources',
               links: [
                 { name: 'Research', to: '/research' },
-                { name: 'Community Papers', to: '/research#community' },
+                // { name: 'Community Papers', to: '/research#community' },
               ],
             },
             {
               title: 'Get Involved',
-              links: [{ name: 'Join Us on Discord', to: 'https://discord.gg/54MS3tPXEQ' }],
+              links: [{ name: 'Join us on Discord', to: 'https://discord.gg/54MS3tPXEQ' }],
             },
           ].map((section, index) => (
             <div key={index} className="mx-10">

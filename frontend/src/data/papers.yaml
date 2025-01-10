@@ -12,7 +12,7 @@ papers:
     year: 2020
     abstract: This paper presents a compact and lightweight architecture for real-time semantic stereo matching, enabling efficient inference on embedded devices with minimal accuracy loss.
     link: https://arxiv.org/abs/1910.00541
-    image: https://images.unsplash.com/photo-1553260168-69b041873e65?auto=format&fit=crop&w=800&q=80
+    image: /images/papers/icra2020.png
     tags:
       - Semantic Stereo Matching
       - Real-Time Processing
@@ -32,7 +32,7 @@ papers:
     year: 2019
     abstract: The authors propose a method to improve self-supervised monocular depth estimation by integrating traditional visual odometry techniques, achieving better accuracy in depth prediction.
     link: https://arxiv.org/abs/1908.03127
-    image: https://images.unsplash.com/photo-1553260168-69b041873e65?auto=format&fit=crop&w=800&q=80
+    image: /images/papers/3dv2019.png
     tags:
       - Monocular Depth Estimation
       - Visual Odometry
@@ -49,7 +49,7 @@ papers:
     year: 2022
     abstract: This work introduces a framework for online domain adaptation in semantic segmentation, allowing models to adapt to continuously changing environments without offline retraining.
     link: https://arxiv.org/abs/2207.10667
-    image: https://images.unsplash.com/photo-1553260168-69b041873e65?auto=format&fit=crop&w=800&q=80
+    image: /images/papers/eccv2022.png
     tags:
       - Domain Adaptation
       - Semantic Segmentation
@@ -71,7 +71,7 @@ papers:
     year: 2023
     abstract: The paper explores real-time adaptation strategies for semantic segmentation models, discussing the trade-offs between adaptation and performance in dynamic environments.
     link: https://arxiv.org/abs/2307.15063
-    image: https://images.unsplash.com/photo-1553260168-69b041873e65?auto=format&fit=crop&w=800&q=80
+    image: /images/papers/iccv2023.png
     tags:
       - Semantic Segmentation
       - Real-Time Adaptation
