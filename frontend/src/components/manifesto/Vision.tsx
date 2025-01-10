@@ -1,5 +1,3 @@
-import React from 'react';
-
 export default function Vision() {
   return (
     <div className="py-20 bg-gray-50 dark:bg-gray-800">
