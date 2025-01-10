@@ -19,7 +19,6 @@ members:
       scholar: https://scholar.google.com/citations?user=o7cz97l31z8J
       linkedin: https://www.linkedin.com/in/jussikarlgren/
   
-
   - name: Saroosh Shabbir
     role: AI Scientist @ AMD Silo AI
     titles:
@@ -143,7 +142,7 @@ members:
       linkedin: https://www.linkedin.com/in/linus-h%C3%A4renstam-nielsen-41997659/
 
   - name: Leonardo Ravaglia
-    role: R&D Researcher @ University of Bologna
+    role: R&D Researcher @ IMEC
     titles:
       - Researcher
     image: /images/team/leonardo.jpeg
