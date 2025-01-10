@@ -1,0 +1,79 @@
+papers:
+  - title: Real-Time Semantic Stereo Matching
+    authors:
+      - Pier Luigi Dovesi
+      - Matteo Poggi
+      - Lorenzo Andraghetti
+      - Miquel Martí
+      - Hedvig Kjellström
+      - Alessandro Pieropan
+      - Stefano Mattoccia
+    conference: ICRA 2020
+    year: 2020
+    abstract: This paper presents a compact and lightweight architecture for real-time semantic stereo matching, enabling efficient inference on embedded devices with minimal accuracy loss.
+    link: https://arxiv.org/abs/1910.00541
+    image: /images/papers/icra2020.png
+    tags:
+      - Semantic Stereo Matching
+      - Real-Time Processing
+      - Deep Learning
+    category: vision
+
+  - title: Enhancing Self-Supervised Monocular Depth Estimation with Traditional Visual Odometry
+    authors:
+      - Lorenzo Andraghetti
+      - Panteleimon Myriokefalitakis
+      - Pier Luigi Dovesi
+      - Belén Luque
+      - Matteo Poggi
+      - Alessandro Pieropan
+      - Stefano Mattoccia
+    conference: 3DV 2019
+    year: 2019
+    abstract: The authors propose a method to improve self-supervised monocular depth estimation by integrating traditional visual odometry techniques, achieving better accuracy in depth prediction.
+    link: https://arxiv.org/abs/1908.03127
+    image: /images/papers/3dv2019.png
+    tags:
+      - Monocular Depth Estimation
+      - Visual Odometry
+      - Self-Supervised Learning
+    category: vision
+
+  - title: Online Domain Adaptation for Semantic Segmentation in Ever-Changing Conditions
+    authors:
+      - Theodoros Panagiotakopoulos
+      - Pier Luigi Dovesi
+      - Linus Härenstam-Nielsen
+      - Matteo Poggi
+    conference: ECCV 2022
+    year: 2022
+    abstract: This work introduces a framework for online domain adaptation in semantic segmentation, allowing models to adapt to continuously changing environments without offline retraining.
+    link: https://arxiv.org/abs/2207.10667
+    image: /images/papers/eccv2022.png
+    tags:
+      - Domain Adaptation
+      - Semantic Segmentation
+      - Online Learning
+    category: adaptive-agents
+
+  - title: To Adapt or Not to Adapt? Real-Time Adaptation for Semantic Segmentation
+    authors:
+      - Marc Botet Colomer
+      - Pier Luigi Dovesi
+      - Theodoros Panagiotakopoulos
+      - Joao Frederico Carvalho
+      - Linus Härenstam-Nielsen
+      - Hossein Azizpour
+      - Hedvig Kjellström
+      - Daniel Cremers
+      - Matteo Poggi
+    conference: ICCV 2023
+    year: 2023
+    abstract: The paper explores real-time adaptation strategies for semantic segmentation models, discussing the trade-offs between adaptation and performance in dynamic environments.
+    link: https://arxiv.org/abs/2307.15063
+    image: /images/papers/iccv2023.png
+    tags:
+      - Semantic Segmentation
+      - Real-Time Adaptation
+      - Deep Learning
+    category: adaptive-agents 

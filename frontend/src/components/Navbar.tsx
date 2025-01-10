@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Sprout, Menu, X } from 'lucide-react';
 import ThemeToggle from './ThemeToggle';
@@ -33,9 +33,9 @@ export default function Navbar() {
             <Link to="/team" className="text-gray-700 dark:text-gray-200 hover:text-green-500">
               Team
             </Link>
-            {/* <Link to="/research" className="text-gray-700 dark:text-gray-200 hover:text-green-500">
+            <Link to="/research" className="text-gray-700 dark:text-gray-200 hover:text-green-500">
               Research
-            </Link> */}
+            </Link>
             <ThemeToggle />
             <Link
               to="https://discord.gg/54MS3tPXEQ"
@@ -64,13 +64,13 @@ export default function Navbar() {
               >
                 Team
               </Link>
-              {/* <Link
+              <Link
                 to="/research"
                 className="block text-gray-700 dark:text-gray-200 hover:text-green-500 py-2"
                 onClick={() => setIsOpen(false)}
               >
                 Research
-              </Link> */}
+              </Link>
               <div className="py-2">
                 <ThemeToggle />
               </div>

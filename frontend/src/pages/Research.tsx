@@ -1,5 +1,5 @@
 import Papers from '../components/research/Papers';
-import CommunityPapers from '../components/research/CommunityPapers';
+// import CommunityPapers from '../components/research/CommunityPapers';
 import { BookOpen } from 'lucide-react';
 
 export default function Research() {
@@ -19,7 +19,7 @@ export default function Research() {
         </div>
       </div>
       <Papers />
-      <CommunityPapers />
+      {/* <CommunityPapers /> */}
     </div>
   );
 }

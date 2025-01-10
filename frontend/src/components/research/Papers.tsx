@@ -1,45 +1,26 @@
 import React from 'react';
-import { BookOpen, Link as LinkIcon, Brain, Eye } from 'lucide-react';
+import { BookOpen, Link as LinkIcon, Eye } from 'lucide-react';
+import papersData from '../../data/papers.yaml';
+import { Paper, validatePaper } from '../../types';
 
-interface Paper {
-  title: string;
-  authors: string[];
-  conference: string;
-  year: number;
-  abstract: string;
-  link: string;
-  image: string;
-  tags: string[];
-  category: 'stable-diffusion' | 'adaptive-agents' | 'vision';
+const rawPapers = papersData.papers;
+const papers = rawPapers.filter(validatePaper);
+
+if (papers.length !== rawPapers.length) {
+  console.warn(`Filtered out ${rawPapers.length - papers.length} invalid papers`);
 }
 
-const papers: Paper[] = [
-  {
-    title: 'Real-time Adaptation in Autonomous Vehicles: A New Paradigm',
-    authors: ['Pier Luigi Dovesi', 'Sarah Chen', 'Michael Roberts'],
-    conference: 'NeurIPS 2023',
-    year: 2023,
-    abstract:
-      'We present a novel approach to real-time adaptation in autonomous driving systems, enabling vehicles to respond to unexpected scenarios and environmental changes.',
-    link: '#',
-    image:
-      'https://images.unsplash.com/photo-1553260168-69b041873e65?auto=format&fit=crop&w=800&q=80',
-    tags: ['Autonomous Driving', 'Adaptive Systems', 'Real-time Learning'],
-    category: 'adaptive-agents',
-  },
-];
-
 export default function Papers() {
-  const [selectedCategory, setSelectedCategory] = React.useState<string | null>(null);
+  const [selectedCategory, setSelectedCategory] = React.useState<Paper['category'] | null>(null);
 
   const categories = [
-    { id: 'stable-diffusion', name: 'Stable Diffusion', icon: Brain },
-    { id: 'adaptive-agents', name: 'Adaptive Agents', icon: Eye },
-    { id: 'vision', name: 'Computer Vision', icon: BookOpen },
+    // { id: 'stable-diffusion' as const, name: 'Stable Diffusion', icon: Brain },
+    { id: 'adaptive-agents' as const, name: 'Adaptive Agents', icon: Eye },
+    { id: 'vision' as const, name: 'Computer Vision', icon: BookOpen },
   ];
 
   const filteredPapers = selectedCategory
-    ? papers.filter(paper => paper.category === selectedCategory)
+    ? papers.filter((paper: Paper) => paper.category === selectedCategory)
     : papers;
 
   return (
@@ -80,7 +61,7 @@ export default function Papers() {
         </div>
 
         <div className="grid gap-8 mx-4">
-          {filteredPapers.map((paper, index) => (
+          {filteredPapers.map((paper: Paper, index: number) => (
             <div
               key={index}
               className="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
@@ -106,7 +87,7 @@ export default function Papers() {
                   </p>
                   <p className="text-gray-600 dark:text-gray-300 mb-4">{paper.abstract}</p>
                   <div className="flex flex-wrap gap-2 mb-4">
-                    {paper.tags.map((tag, idx) => (
+                    {paper.tags.map((tag: string, idx: number) => (
                       <span
                         key={idx}
                         className="bg-green-50 dark:bg-green-900/30 text-green-700 dark:text-green-300 px-3 py-1 rounded-full text-sm"
