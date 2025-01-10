@@ -10,7 +10,7 @@ export default function Team() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <Users className="h-12 w-12 mx-auto text-green-500 mb-4" />
-          <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">Our Team</h1>
+          <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">Team</h1>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
           A collective of scientists, professors, engineers, researchers, and developers coming together from top universities, labs, and companies united by a passion for advancing AI research and driving social impact.
           </p>

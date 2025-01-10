@@ -1,4 +1,4 @@
-import { ArrowRight, Sprout } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export default function Intro() {
@@ -8,7 +8,6 @@ export default function Intro() {
         <div className="flex flex-col lg:flex-row lg:items-center lg:gap-12">
           <div className="flex-1 space-y-6 lg:space-y-16">
             <h1 className="text-3xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-4 lg:mb-8 flex flex-wrap items-center justify-center lg:justify-start gap-3 lg:gap-6">
-              <Sprout className="h-8 w-8 lg:h-16 lg:w-16 text-green-500 shrink-0" />
               <span className="text-center lg:text-left">The <span className="bg-gradient-to-r from-green-400 to-green-600 bg-clip-text text-transparent">Good</span> AI Lab</span>
             </h1>
             <div className="prose dark:prose-invert space-y-4 lg:space-y-12">
