@@ -4,10 +4,8 @@ import ViteYaml from '@modyfi/vite-plugin-yaml';
 
 // https://vitejs.dev/config/
 export default defineConfig(() => {
-  const baseUrl = process.env.VITE_BASE_URL || '/';
-  
   return {
-    base: baseUrl,
+    base: './',
     plugins: [
       react(),
       ViteYaml(),
