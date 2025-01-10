@@ -39,13 +39,13 @@ export default function Intro() {
               </Link>
             </div>
           </div>
-          <div className="hidden lg:block lg:w-1/3 mt-10 lg:mt-0">
+          <div className="hidden lg:block lg:w-1/3 my-30 lg:mt-8">
             <div className="relative">
-              <div className="absolute -inset-4 bg-green-500/20 rounded-lg blur-xl"></div>
+              <div className="absolute -inset-4 rounded-[20%] bg-green-500/20 blur-xl"></div>
               <img
                 src="/images/seedling.png"
                 alt="AI Research"
-                className="relative rounded-lg shadow-2xl"
+                className="relative rounded-[20%] shadow-2xl"
               />
             </div>
           </div>

@@ -16,7 +16,7 @@ export default function Footer() {
           <div>
             <div className="flex items-center mb-4">
               <Sprout className="h-6 w-6 text-green-500" />
-              <span className="ml-2 text-lg font-semibold text-white">The Good AI Lab</span>
+              <span className="ml-2 text-lg font-semibold text-white">The <span className="bg-gradient-to-r from-green-400 to-green-600 bg-clip-text text-transparent">Good</span> AI Lab</span>
             </div>
             <p className="text-sm">
               Building a better future through ethical AI development and community engagement.
