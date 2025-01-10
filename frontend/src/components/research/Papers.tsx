@@ -1,5 +1,5 @@
 import React from 'react';
-import { BookOpen, Link as LinkIcon, Brain, Eye } from 'lucide-react';
+import { BookOpen, Link as LinkIcon, Eye } from 'lucide-react';
 import papersData from '../../data/papers.yaml';
 import { Paper, validatePaper } from '../../types';
 
@@ -14,7 +14,7 @@ export default function Papers() {
   const [selectedCategory, setSelectedCategory] = React.useState<Paper['category'] | null>(null);
 
   const categories = [
-    { id: 'stable-diffusion' as const, name: 'Stable Diffusion', icon: Brain },
+    // { id: 'stable-diffusion' as const, name: 'Stable Diffusion', icon: Brain },
     { id: 'adaptive-agents' as const, name: 'Adaptive Agents', icon: Eye },
     { id: 'vision' as const, name: 'Computer Vision', icon: BookOpen },
   ];
