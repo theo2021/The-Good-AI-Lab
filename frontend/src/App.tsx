@@ -9,14 +9,9 @@ import Research from './pages/Research';
 import Manifesto from './pages/Manifesto';
 
 export default function App() {
-  // Get the current path from the URL
-  const basename = window.location.pathname.includes('/pr-preview/') 
-    ? window.location.pathname.split('/pr-preview/')[0] + '/pr-preview/pr-' + window.location.pathname.split('/pr-')[1].split('/')[0]
-    : '/';
-
   return (
     <ThemeProvider>
-      <Router basename={basename}>
+      <Router>
         <div className="min-h-screen bg-white dark:bg-gray-900">
           <Navbar />
           <Routes>
