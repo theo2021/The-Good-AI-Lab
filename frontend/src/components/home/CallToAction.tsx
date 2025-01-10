@@ -1,5 +1,3 @@
-import { FaDiscord } from 'react-icons/fa';
-
 export default function CallToAction() {
   return (
     <div className="py-16 bg-gradient-to-br from-green-50 to-white dark:from-gray-800 dark:to-gray-900" id="cta">
@@ -14,9 +12,7 @@ export default function CallToAction() {
             href="https://discord.gg/54MS3tPXEQ"
             className="bg-white text-green-500 dark:bg-gray-800 dark:text-green-400 px-8 py-3 rounded-md hover:bg-green-50 dark:hover:bg-gray-700 transition-colors"
           >
-            Join Our Discord Server <span className="ml-2">
-              <FaDiscord className="h-5 w-5 inline" />
-            </span>
+            Join Us
           </a>
         </div>
       </div>
