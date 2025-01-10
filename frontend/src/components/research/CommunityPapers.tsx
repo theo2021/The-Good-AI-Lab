@@ -1,10 +1,10 @@
 import { useEffect } from 'react';
 import { Users, ExternalLink } from 'lucide-react';
 import { useLocation } from 'react-router-dom';
-import { CommunityPaper, validateCommunityPaper } from '../../types';
+import { Paper, validatePaper } from '../../types';
 import communityPapersData from '../../data/community-papers.yaml';
 
-const papers = communityPapersData.papers.filter(validateCommunityPaper);
+const papers = communityPapersData.papers.filter(validatePaper);
 
 export default function CommunityPapers() {
   const location = useLocation();
@@ -28,7 +28,7 @@ export default function CommunityPapers() {
           </h2>
         </div>
         <div className="grid md:grid-cols-2 gap-8">
-          {papers.map((paper: CommunityPaper, index: number) => (
+          {papers.map((paper: Paper, index: number) => (
             <div
               key={index}
               className="bg-gray-50 dark:bg-gray-700 rounded-xl shadow-lg overflow-hidden"
@@ -36,7 +36,7 @@ export default function CommunityPapers() {
               <img className="w-full h-48 object-cover" src={paper.image} alt={paper.title} />
               <div className="p-6">
                 <p className="text-sm text-green-600 dark:text-green-400 mb-2">
-                  {paper.institution} • {paper.year}
+                  {paper.conference} • {paper.year}
                 </p>
                 <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
                   {paper.title}

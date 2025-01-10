@@ -1,5 +1,5 @@
-import Papers from '../components/research/Papers';
-// import CommunityPapers from '../components/research/CommunityPapers';
+import OurResearch from '../components/research/OurResearch';
+import CommunityPapers from '../components/research/CommunityPapers';
 import { BookOpen } from 'lucide-react';
 
 export default function Research() {
@@ -12,14 +12,14 @@ export default function Research() {
             Research at The Good AI Lab
           </h1>
           <p className="text-xl text-gray-600 dark:text-gray-300">
-            Advancing the field of AI through rigorous research while ensuring its benefits reach
-            everyone. We focus on embodied AI systems capable of continuous learning across diverse
-            contexts.
+          We focus on foundational academic AI research. 
+          <br />
+          We publish in open venues, share our code, and push the field forward.
           </p>
         </div>
       </div>
-      <Papers />
-      {/* <CommunityPapers /> */}
+      <OurResearch />
+      <CommunityPapers />
     </div>
   );
 }

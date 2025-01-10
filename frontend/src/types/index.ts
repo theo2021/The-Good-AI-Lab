@@ -1,3 +1,10 @@
+export interface Research {
+  title: string;
+  abstract: string;
+  image: string;
+  tags: string[];
+}
+
 export interface Paper {
   title: string;
   authors: string[];
@@ -7,17 +14,6 @@ export interface Paper {
   link: string;
   image: string;
   tags: string[];
-  category: 'stable-diffusion' | 'adaptive-agents' | 'vision';
-}
-
-export interface CommunityPaper {
-  title: string;
-  authors: string[];
-  institution: string;
-  year: number;
-  abstract: string;
-  link: string;
-  image: string;
 }
 
 export interface TeamMember {
@@ -25,7 +21,7 @@ export interface TeamMember {
   role: string;
   image: string;
   bio: string;
-  expertise: string[];
+  titles: string[];
   links: {
     scholar?: string;
     linkedin?: string;
@@ -41,6 +37,32 @@ export interface NewsItem {
   image: string;
 }
 
+
+export function validateResearch(research: unknown): research is Research {
+  const r = research as Research;
+  const isValid = 
+    typeof r.title === 'string' &&
+    typeof r.abstract === 'string' &&
+    typeof r.image === 'string' &&
+    Array.isArray(r.tags) &&
+    r.tags.every(tag => typeof tag === 'string');
+
+  if (!isValid) {
+    console.warn('Invalid research data:', {
+      paper: r,
+      validationErrors: {
+        title: typeof r.title !== 'string' ? 'Invalid title type' : null,
+        abstract: typeof r.abstract !== 'string' ? 'Invalid abstract type' : null,
+        image: typeof r.image !== 'string' ? 'Invalid image type' : null,
+        tags: !Array.isArray(r.tags) || !r.tags.every(tag => typeof tag === 'string') 
+          ? 'Invalid tags array' : null,
+      }
+    });
+  }
+
+  return isValid;
+}
+
 export function validatePaper(paper: unknown): paper is Paper {
   const p = paper as Paper;
   const isValid = 
@@ -51,10 +73,7 @@ export function validatePaper(paper: unknown): paper is Paper {
     typeof p.year === 'number' &&
     typeof p.abstract === 'string' &&
     typeof p.link === 'string' &&
-    typeof p.image === 'string' &&
-    Array.isArray(p.tags) &&
-    p.tags.every(tag => typeof tag === 'string') &&
-    ['stable-diffusion', 'adaptive-agents', 'vision'].includes(p.category);
+    typeof p.image === 'string';
 
   if (!isValid) {
     console.warn('Invalid paper data:', {
@@ -64,41 +83,6 @@ export function validatePaper(paper: unknown): paper is Paper {
         authors: !Array.isArray(p.authors) || !p.authors.every(author => typeof author === 'string') 
           ? 'Invalid authors array' : null,
         conference: typeof p.conference !== 'string' ? 'Invalid conference type' : null,
-        year: typeof p.year !== 'number' ? 'Invalid year type' : null,
-        abstract: typeof p.abstract !== 'string' ? 'Invalid abstract type' : null,
-        link: typeof p.link !== 'string' ? 'Invalid link type' : null,
-        image: typeof p.image !== 'string' ? 'Invalid image type' : null,
-        tags: !Array.isArray(p.tags) || !p.tags.every(tag => typeof tag === 'string') 
-          ? 'Invalid tags array' : null,
-        category: !['stable-diffusion', 'adaptive-agents', 'vision'].includes(p.category) 
-          ? 'Invalid category' : null,
-      }
-    });
-  }
-
-  return isValid;
-}
-
-export function validateCommunityPaper(paper: unknown): paper is CommunityPaper {
-  const p = paper as CommunityPaper;
-  const isValid = 
-    typeof p.title === 'string' &&
-    Array.isArray(p.authors) &&
-    p.authors.every(author => typeof author === 'string') &&
-    typeof p.institution === 'string' &&
-    typeof p.year === 'number' &&
-    typeof p.abstract === 'string' &&
-    typeof p.link === 'string' &&
-    typeof p.image === 'string';
-
-  if (!isValid) {
-    console.warn('Invalid community paper data:', {
-      paper: p,
-      validationErrors: {
-        title: typeof p.title !== 'string' ? 'Invalid title type' : null,
-        authors: !Array.isArray(p.authors) || !p.authors.every(author => typeof author === 'string') 
-          ? 'Invalid authors array' : null,
-        institution: typeof p.institution !== 'string' ? 'Invalid institution type' : null,
         year: typeof p.year !== 'number' ? 'Invalid year type' : null,
         abstract: typeof p.abstract !== 'string' ? 'Invalid abstract type' : null,
         link: typeof p.link !== 'string' ? 'Invalid link type' : null,
@@ -117,8 +101,8 @@ export function validateTeamMember(member: unknown): member is TeamMember {
     typeof m.role === 'string' &&
     typeof m.image === 'string' &&
     typeof m.bio === 'string' &&
-    Array.isArray(m.expertise) &&
-    m.expertise.every(exp => typeof exp === 'string') &&
+    Array.isArray(m.titles) &&
+    m.titles.every(exp => typeof exp === 'string') &&
     typeof m.links === 'object' &&
     (!m.links.scholar || typeof m.links.scholar === 'string') &&
     (!m.links.linkedin || typeof m.links.linkedin === 'string');
@@ -131,8 +115,8 @@ export function validateTeamMember(member: unknown): member is TeamMember {
         role: typeof m.role !== 'string' ? 'Invalid role type' : null,
         image: typeof m.image !== 'string' ? 'Invalid image type' : null,
         bio: typeof m.bio !== 'string' ? 'Invalid bio type' : null,
-        expertise: !Array.isArray(m.expertise) || !m.expertise.every(exp => typeof exp === 'string') 
-          ? 'Invalid expertise array' : null,
+        expertise: !Array.isArray(m.titles) || !m.titles.every(exp => typeof exp === 'string') 
+          ? 'Invalid titles array' : null,
         links: typeof m.links !== 'object' ? 'Invalid links object' : null,
       }
     });
@@ -167,3 +151,5 @@ export function validateNewsItem(item: unknown): item is NewsItem {
 
   return isValid;
 } 
+
+export const mailto = "mailto:goodailab@gmail.com?subject=Inquiry%20About%20Joining%20The%20Good%20AI%20Lab&body=Hello%20Good%20AI%20Lab%20Team,%0A%0AI%20would%20like%20to%20learn%20more%20about%20your%20organization%20and%20the%20opportunities%20to%20get%20involved.%0A%0ABest%20regards,%0A[Your%20Name]";

@@ -12,8 +12,7 @@ export default function Team() {
           <Users className="h-12 w-12 mx-auto text-green-500 mb-4" />
           <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">Our Team</h1>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-            A collective of scientists, professors, engineers, and researchers dedicated to making
-            AI more democratic and accessible.
+          A collective of scientists, professors, engineers, researchers, and developers coming together from top universities, labs, and companies united by a passion for advancing AI research and driving social impact.
           </p>
         </div>
 
@@ -24,25 +23,25 @@ export default function Team() {
               className="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow flex flex-col h-full"
             >
               <div className="relative">
-                <img className="h-64 w-full object-cover" src={member.image} alt={member.name} />
-                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-6">
+                <img className="w-full h-full object-cover aspect-square" src={member.image} alt={member.name} />
+                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6">
                   <h3 className="text-2xl font-bold text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">{member.name}</h3>
-                  <p className="text-green-400 font-medium drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">{member.role}</p>
+                  <p className="text-green-500 font-medium drop-shadow-[0_2px_4px_rgba(1.0,1.0,1.0,0.8)]">{member.role}</p>
                 </div>
               </div>
               <div className="p-6 flex flex-col flex-grow">
                 <div className="flex-grow space-y-4">
-                  <p className="text-gray-600 dark:text-gray-300 line-clamp-10">{member.bio}</p>
                   <div className="flex flex-wrap gap-2">
-                    {member.expertise.map((skill: string, idx: number) => (
+                    {member.titles.map((title: string, idx: number) => (
                       <span
                         key={idx}
                         className="bg-green-50 dark:bg-green-900/30 text-green-700 dark:text-green-300 px-2 py-1 rounded-full text-xs"
                       >
-                        {skill}
+                        {title}
                       </span>
                     ))}
                   </div>
+                  <p className="text-gray-600 dark:text-gray-300 line-clamp-10">{member.bio}</p>
                 </div>
                 <div className="flex gap-4 mt-6 pt-4 border-t border-gray-200 dark:border-gray-700">
                   {member.links.scholar && (
