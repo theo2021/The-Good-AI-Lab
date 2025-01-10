@@ -6,7 +6,7 @@ export default function Manifesto() {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-8 lg:mb-12">
           <Scroll className="h-10 w-10 lg:h-12 lg:w-12 mx-auto text-green-600 dark:text-green-500 mb-4" />
-          <h1 className="text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white mb-4">Our Manifesto</h1>
+          <h1 className="text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white mb-4">Manifesto</h1>
         </div>
       </div>
       <div className="prose prose-base lg:prose-lg mx-auto px-4 lg:px-0 mb-16 lg:mb-20 dark:prose-invert prose-headings:text-gray-900 dark:prose-headings:text-white prose-p:text-gray-600 dark:prose-p:text-gray-300 prose-li:text-gray-600 dark:prose-li:text-gray-300 prose-h3:text-green-600 dark:prose-h3:text-green-500 max-w-4xl lg:max-w-8xl">
